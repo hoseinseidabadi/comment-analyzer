@@ -1,6 +1,7 @@
-import streamlit as st
 import openai
-import json
+import streamlit as st
+from dotenv import load_dotenv
+import os
 
 # خواندن متغیرهای محیطی
 load_dotenv()
