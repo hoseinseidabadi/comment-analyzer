@@ -49,7 +49,7 @@ if st.button("تحلیل کن"):
     else:
         with st.spinner("در حال بررسی..."):
             try:
-                response = client.chat.completions.create(
+                response = openai.ChatCompletion.create(
                     model="gpt-4o",
                     messages=[
                         {
