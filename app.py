@@ -22,7 +22,7 @@ functions = [
                 },
                 "Reason for insult": {
                     "type": "string",
-                    "description": "دلیل توهین‌آمیز بودن"
+                    "description": "دلیل توهین‌آمیز بودن به فارسی"
                 },
                 "The degree of offensiveness": {
                     "type": "integer",
