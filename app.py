@@ -2,10 +2,10 @@ import openai
 import streamlit as st
 from dotenv import load_dotenv
 import os
-
+from openai import OpenAI
 # خواندن متغیرهای محیطی
 load_dotenv()
-openai.api_key = os.getenv("OPENAI_API_KEY")
+client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 # 📌 تعریف فانکشن
 functions = [
@@ -49,7 +49,7 @@ if st.button("تحلیل کن"):
     else:
         with st.spinner("در حال بررسی..."):
             try:
-                response = openai.ChatCompletion.create(
+                response = client.chat.completions.create(
                     model="gpt-4o",
                     messages=[
                         {
